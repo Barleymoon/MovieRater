@@ -33,7 +33,9 @@ namespace MovieRater.Data
 
         public List<string> Actors { get; set; }
 
+
         public string Review { get; set; }
+
 
 
 
