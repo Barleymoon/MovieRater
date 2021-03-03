@@ -26,6 +26,7 @@ namespace MovieRater.Data
         public string Description { get; set; }
         
         public DateTimeOffset AddedMovie { get; set; }
+        public string Genre { get; set; }
         
         public List<string> Actors { get; set; }
         

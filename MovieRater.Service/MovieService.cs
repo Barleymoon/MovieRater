@@ -25,6 +25,7 @@ namespace MovieRater.Service
                     OwnerId = _userId,
                     Title = model.Title,
                     Description = model.Description,
+                    Genre = model.Genre,
                     Actors = model.Actors
                 };
             using (var ctx = new ApplicationDbContext())
@@ -49,10 +50,31 @@ namespace MovieRater.Service
                                     MovieId = m.MovieId,
                                     Title = m.Title,
                                     Description = m.Description,
+                                    Genre = m.Genre,
                                     AddedMovie = m.AddedMovie
                                 }
                         );
                 return query.ToArray();
+            }
+        }
+
+        public MovieDetail GetMovieByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .SingleOrDefault(m => m.Title == title && m.OwnerId == _userId);
+                    return
+                        new MovieDetail
+                        {
+                            MovieId = entity.MovieId,
+                            Title = entity.Title,
+                            Description = entity.Description,
+                            Genre = entity.Genre,
+                            AddedMovie = entity.AddedMovie
+                        };
             }
         }
     }
