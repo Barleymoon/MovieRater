@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
 using System.ComponentModel.DataAnnotations.Schema;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace MovieRater.Data
     {
         [Key]
         public int ReviewId { get; set; }
+
         public Guid UserId { get; set; }
 
         [Required]
@@ -26,6 +29,8 @@ namespace MovieRater.Data
 /*        [ForeignKey(nameof(Movie))]
         public int MovieId { get; set; }
         public virtual Movie Movie { get; set; }*/
+
+
 
     }
 }
