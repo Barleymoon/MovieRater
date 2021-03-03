@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieRater.Data
+namespace MovieRater.Model
 {
-    public class Show
+    public class ShowDetail
     {
-        [Key]
         public int ShowId { get; set; }
         [Required]
         [MinLength(1, ErrorMessage = "Title must be more than one character.")]
@@ -24,8 +23,5 @@ namespace MovieRater.Data
 
         public List<string> Actors { get; set; }
         public string Review { get; set; }
-
-
-
     }
 }
