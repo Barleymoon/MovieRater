@@ -16,6 +16,8 @@ namespace MovieRater.Model
         [Required]
         [MinLength(3, ErrorMessage = "Description must be more than 3 characters.")]
         public string Description { get; set; }
-        
+
+        public List<string> Actors { get; set; }
+
     }
 }
