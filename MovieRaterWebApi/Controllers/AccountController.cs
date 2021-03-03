@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using MovieRater.Data;
 using MovieRaterWebApi.Models;
 using MovieRaterWebApi.Providers;
 using MovieRaterWebApi.Results;
