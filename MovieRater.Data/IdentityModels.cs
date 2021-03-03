@@ -27,14 +27,14 @@ namespace MovieRater.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
 
         public DbSet<Movie> Movies { get; set; }
-        // public DbSet<Show> Shows { get; set; }
+        public DbSet<Show> Shows { get; set; }
         // public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -43,12 +43,14 @@ namespace MovieRater.Data
             .Conventions
             .Remove<PluralizingTableNameConvention>();
 
+
             modelBuilder
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
         }
     }
+
 
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
@@ -63,6 +65,7 @@ namespace MovieRater.Data
         public IdentityUserRoleConfiguration()
         {
             HasKey(iur => iur.UserId);
+
         }
     }
 }
