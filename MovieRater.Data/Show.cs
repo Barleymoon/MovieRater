@@ -20,7 +20,7 @@ namespace MovieRater.Data
 
         public List<string> Actors { get; set; }
 
-        public int ShowId { get; set; }
+
 
     }
 }
