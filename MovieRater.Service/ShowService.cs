@@ -50,8 +50,14 @@ namespace MovieRater.Service
                                     Title = s.Title,
                                     Description = s.Description,
                                     AddedShow = s.AddedShow,
-                                }
-                                
+                                    //Erics Changes
+                                    Reviews = s.Reviews.Select(r => new ShowReviewDisplayItem()
+                                    {
+                                        ReviewId = r.ReviewId,
+                                        Score = r.Score,
+                                        ReviewText = r.ReviewText
+                                    }).ToList()
+                                }                                
                         );
                 return query.ToArray();
             }
