@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Model
 {
-    public class Class1
+    public class ShowDisplayItem
     {
+        public string Title { get; set; }
+        public string Genre { get; set; }
     }
 }
