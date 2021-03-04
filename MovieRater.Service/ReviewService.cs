@@ -25,7 +25,8 @@ namespace MovieRater.Service
                 UserId = _userId,
                 ReviewText = model.ReviewText,
                 Score = model.Score,
-                CreatedUtc = DateTimeOffset.Now
+                CreatedUtc = DateTimeOffset.Now,
+                MovieId = model.MovieId
             };
 
             _context.Reviews.Add(review);
@@ -42,7 +43,13 @@ namespace MovieRater.Service
                 Score = r.Score,
                 ReviewText = r.ReviewText,
                 CreatedUtc = r.CreatedUtc,
-                ModifiedUtc = r.ModifiedUtc
+                ModifiedUtc = r.ModifiedUtc,
+                MovieId = r.MovieId,
+                Movie = new MovieDisplayItem
+                {
+                    Title = r.Movie.Title,
+                    Genre = r.Movie.Genre
+                }
             }).ToList();
 
             return reviewListItems;

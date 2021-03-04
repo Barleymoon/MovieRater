@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieRater.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,5 +16,8 @@ namespace MovieRater.Model
         public string Genre { get; set; }
         [Display(Name="Added")]
         public DateTimeOffset AddedMovie { get; set; }
+
+        //Eric's Changes
+        public List<ReviewDisplayItem> Reviews { get; set; }
     }
 }

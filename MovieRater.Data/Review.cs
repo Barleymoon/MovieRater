@@ -26,10 +26,13 @@ namespace MovieRater.Data
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 
-/*        [ForeignKey(nameof(Movie))]
+        [ForeignKey(nameof(Movie))]
         public int MovieId { get; set; }
-        public virtual Movie Movie { get; set; }*/
+        public virtual Movie Movie { get; set; }
 
+/*        [ForeignKey(nameof(Show))]
+        public int? ShowId { get; set; }
+        public virtual Show Show { get; set; }*/
 
 
     }
