@@ -22,13 +22,21 @@ namespace MovieRaterWebApi.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetByTitle(string title)
+        public IHttpActionResult GetMovieById(int id)
+        {
+            MovieService movieService = CreateMovieService();
+            var movie = movieService.GetMovieById(id);
+            return Ok(movie);
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetMovieByTitle(string title)
         {
             MovieService movieService = CreateMovieService();
             var movie = movieService.GetMovieByTitle(title);
             return Ok(movie);
         }
-        
+
         [HttpPost]
         public IHttpActionResult PostMovie(MovieCreate movie)
         {

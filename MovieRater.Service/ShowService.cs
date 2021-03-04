@@ -62,5 +62,50 @@ namespace MovieRater.Service
                 return query.ToArray();
             }
         }
+
+        public IEnumerable<ShowListItem> GetShowByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Shows
+                    .Where(s => s.Title == title)
+                    .Select(
+                        s =>
+                        new ShowListItem()
+                        {
+                            ShowId = s.ShowId,
+                            Title = s.Title,
+                            Description = s.Description,
+                            Genre = s.Genre,
+                            AddedShow = s.AddedShow,
+                        }
+                        );
+                return query.ToArray();
+            }
+
+        }
+
+        /*public ShowDetail GetShowByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Shows
+                        .SingleOrDefault(s => s.Title == title && s.OwnerId == _userId);
+                return
+                    new ShowDetail
+                    {
+                        ShowId = entity.ShowId,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        Genre = entity.Genre,
+                        AddedShow = entity.AddedShow
+                    };
+                
+            }*/
+        
     }
 }
