@@ -16,7 +16,6 @@ namespace MovieRater.Data
 
         public string Title { get; set; }
         
-        [Required]
         public Guid OwnerId { get; set; }
 
         [Required]

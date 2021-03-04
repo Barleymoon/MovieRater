@@ -13,6 +13,15 @@ namespace MovieRaterWebApi.Controllers
     [Authorize]
     public class ShowController : ApiController
     {
+
+        private ShowService CreateShowService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var showService = new ShowService(userId);
+            return showService;
+        }
+
+
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -39,11 +48,13 @@ namespace MovieRaterWebApi.Controllers
             return Ok();
         }
 
-        private ShowService CreateShowService()
+        [HttpGet]
+        public IHttpActionResult GetShowByTitle(string title)
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var showService = new ShowService(userId);
-            return showService;
+            ShowService showService = CreateShowService();
+            var show = showService.GetShowByTitle(title);
+            return Ok(show);
         }
+
     }
 }
