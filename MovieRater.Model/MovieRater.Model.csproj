@@ -58,19 +58,22 @@
     <Compile Include="MovieDetail.cs" />
     <Compile Include="MovieListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="ReviewCreate.cs" />
     <Compile Include="ReviewDetail.cs" />
     <Compile Include="ReviewListItem.cs" />
-
     <Compile Include="ShowCreate.cs" />
     <Compile Include="ShowDetail.cs" />
     <Compile Include="ShowListItem.cs" />
-
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRater.Data\MovieRater.Data.csproj">
+      <Project>{2ea36e56-b4d1-482a-804e-8c78d541e8e2}</Project>
+      <Name>MovieRater.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

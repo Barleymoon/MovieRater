@@ -28,7 +28,7 @@ namespace MovieRaterWebApi.Controllers
             var movie = movieService.GetMovieByTitle(title);
             return Ok(movie);
         }
-        
+
         [HttpPost]
         public IHttpActionResult PostMovie(MovieCreate movie)
         {

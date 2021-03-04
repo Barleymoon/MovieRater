@@ -65,16 +65,16 @@ namespace MovieRater.Service
                 var entity =
                     ctx
                         .Movies
-                        .SingleOrDefault(m => m.Title == title && m.OwnerId == _userId);
-                    return
-                        new MovieDetail
-                        {
-                            MovieId = entity.MovieId,
-                            Title = entity.Title,
-                            Description = entity.Description,
-                            Genre = entity.Genre,
-                            AddedMovie = entity.AddedMovie
-                        };
+                        .SingleOrDefault(m => m.Title == title);
+                return
+                    new MovieDetail
+                    {
+                        MovieId = entity.MovieId,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        Genre = entity.Genre,
+                        AddedMovie = entity.AddedMovie
+                    };
             }
         }
     }

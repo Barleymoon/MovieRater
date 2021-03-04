@@ -15,5 +15,6 @@ namespace MovieRater.Model
         public string Description { get; set; }
         public List<string> Actors { get; set; }
         public string Genre { get; set; }
+        public string Rating { get; set; }
     }
 }
