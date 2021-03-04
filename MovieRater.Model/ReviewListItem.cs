@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieRater.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,10 @@ namespace MovieRater.Model
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 
-/*        public int MovieId { get; set; }
-        public Movie Movie { get; set; }*/
+        public int MovieId { get; set; }
+        public MovieDisplayItem Movie { get; set; }
+
+/*        public int? ShowId { get; set; }*/
+        
     }
 }

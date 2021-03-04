@@ -16,5 +16,7 @@ namespace MovieRater.Model
 
         [Display(Name= "Created")]
         public DateTimeOffset AddedShow { get; set; }
+
+
     }
 }

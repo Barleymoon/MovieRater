@@ -51,31 +51,83 @@ namespace MovieRater.Service
                                     Title = m.Title,
                                     Description = m.Description,
                                     Genre = m.Genre,
-                                    AddedMovie = m.AddedMovie
+                                    AddedMovie = m.AddedMovie,
+                                    //Eric's Changes
+                                    Reviews = m.Reviews.Select(r => new ReviewDisplayItem()
+                                    {
+                                        ReviewId = r.ReviewId,                                        
+                                        Score = r.Score,
+                                        ReviewText = r.ReviewText,                                        
+                                    }).ToList()
                                 }
                         );
                 return query.ToArray();
             }
         }
 
-        public MovieDetail GetMovieByTitle(string title)
+
+        public MovieDetail GetMovieById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Movies
-                        .SingleOrDefault(m => m.Title == title && m.OwnerId == _userId);
-                    return
-                        new MovieDetail
-                        {
-                            MovieId = entity.MovieId,
-                            Title = entity.Title,
-                            Description = entity.Description,
-                            Genre = entity.Genre,
-                            AddedMovie = entity.AddedMovie
-                        };
+                        .Single(m => m.MovieId == id && m.OwnerId == _userId);
+                return
+                    new MovieDetail
+                    {
+                        MovieId = entity.MovieId,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        Rating = entity.Rating,
+                        Reviews = entity.Reviews,
+                        AddedMovie = entity.AddedMovie
+                    };
             }
         }
+         public MovieDetail GetMovieByTitle(string title)
+         {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .SingleOrDefault(m => m.Title == title);
+                return
+                    new MovieDetail
+                    {
+                        MovieId = entity.MovieId,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        Genre = entity.Genre,
+                        AddedMovie = entity.AddedMovie
+                    };
+            }
+         }
+
+        /*public IEnumerable<MovieListItem> GetMovieByTitle(int movieId, string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                   ctx
+                       .Movies
+                       .Where(m => m.Title == title && m.MovieId == movieId)
+                       .Select(
+                            m =>
+                               new MovieListItem()
+                               {
+                                   Title = m.Title,
+                                   MovieId = m.MovieId,
+                                   Description = m.Description,
+                                   Genre = m.Genre,
+                                   AddedMovie = m.AddedMovie,
+                               }
+                        );
+                return query.ToArray();
+            }
+        }*/
+
     }
 }

@@ -28,15 +28,12 @@ namespace MovieRater.Data
 
         public string Genre { get; set; }
 
-        public virtual List<string> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; }
 
         public List<string> Actors { get; set; }
 
 
         public string Review { get; set; }
-
-
-
 
     }
 }

@@ -49,8 +49,9 @@ namespace MovieRater.Service
                                     ShowId = s.ShowId,
                                     Title = s.Title,
                                     Description = s.Description,
-                                    AddedShow = s.AddedShow
+                                    AddedShow = s.AddedShow,
                                 }
+                                
                         );
                 return query.ToArray();
             }
