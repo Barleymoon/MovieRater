@@ -85,31 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202103040129293_init.cs" />
-    <Compile Include="Migrations\202103040129293_init.Designer.cs">
-      <DependentUpon>202103040129293_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103040213329_AddingForeignKey.cs" />
-    <Compile Include="Migrations\202103040213329_AddingForeignKey.Designer.cs">
-      <DependentUpon>202103040213329_AddingForeignKey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103040219228_updatemoviedb.cs" />
-    <Compile Include="Migrations\202103040219228_updatemoviedb.Designer.cs">
-      <DependentUpon>202103040219228_updatemoviedb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103040303392_updateShow.cs" />
-    <Compile Include="Migrations\202103040303392_updateShow.Designer.cs">
-      <DependentUpon>202103040303392_updateShow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103040314111_new.cs" />
-    <Compile Include="Migrations\202103040314111_new.Designer.cs">
-      <DependentUpon>202103040314111_new.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103040319306_revertBack.cs" />
-    <Compile Include="Migrations\202103040319306_revertBack.Designer.cs">
-      <DependentUpon>202103040319306_revertBack.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Review.cs" />
@@ -118,26 +93,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103040129293_init.resx">
-      <DependentUpon>202103040129293_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103040213329_AddingForeignKey.resx">
-      <DependentUpon>202103040213329_AddingForeignKey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103040219228_updatemoviedb.resx">
-      <DependentUpon>202103040219228_updatemoviedb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103040303392_updateShow.resx">
-      <DependentUpon>202103040303392_updateShow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103040314111_new.resx">
-      <DependentUpon>202103040314111_new.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103040319306_revertBack.resx">
-      <DependentUpon>202103040319306_revertBack.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
