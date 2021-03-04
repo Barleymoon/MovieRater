@@ -85,6 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 269d1d664c2eb78241b096d37bfe649acfab7e14
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Review.cs" />
@@ -94,5 +98,13 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+>>>>>>> 269d1d664c2eb78241b096d37bfe649acfab7e14
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
