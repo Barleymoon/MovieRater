@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Model
 {
-    public class ReviewListItem
+    public class ShowReviewListItem
     {
         public int ReviewId { get; set; }
         public Guid UserId { get; set; }
@@ -16,10 +16,9 @@ namespace MovieRater.Model
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 
-        public int MovieId { get; set; }
-        public MovieDisplayItem Movie { get; set; }
 
 
-
+        public int ShowId { get; set; }
+        public ShowDisplayItem Show { get; set; }
     }
 }

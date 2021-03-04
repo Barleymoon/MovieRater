@@ -65,7 +65,11 @@
     <Compile Include="ReviewListItem.cs" />
     <Compile Include="ShowCreate.cs" />
     <Compile Include="ShowDetail.cs" />
+    <Compile Include="ShowDisplayItem.cs" />
     <Compile Include="ShowListItem.cs" />
+    <Compile Include="ShowReviewCreate.cs" />
+    <Compile Include="ShowReviewDisplayItem.cs" />
+    <Compile Include="ShowReviewListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

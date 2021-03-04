@@ -30,10 +30,6 @@ namespace MovieRater.Data
         public int MovieId { get; set; }
         public virtual Movie Movie { get; set; }
 
-/*        [ForeignKey(nameof(Show))]
-        public int? ShowId { get; set; }
-        public virtual Show Show { get; set; }*/
-
 
     }
 }

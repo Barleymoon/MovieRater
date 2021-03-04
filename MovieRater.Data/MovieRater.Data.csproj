@@ -85,13 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-
-    <Compile Include="Migrations\Configuration.cs" />
-
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Review.cs" />
     <Compile Include="Show.cs" />
+    <Compile Include="ShowReview.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

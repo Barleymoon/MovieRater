@@ -210,6 +210,7 @@
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Controllers\ShowController.cs" />
+    <Compile Include="Controllers\ShowReviewController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
