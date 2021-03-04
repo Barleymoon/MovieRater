@@ -11,3 +11,5 @@ Google Docs link - https://docs.google.com/document/d/14PTZRE0kO0wwG08elSoAxBJJz
 
 Below is a diagram That was drawn to represent how our Classes And tables would work together or seperately.
 https://sdjanuary2021.slack.com/files/U01JA8D9D7V/F01QVTQBH2L/whiteboard_2_-01.png
+
+This Project was made with mostly Javascript and C# with a splash of HTML. 
