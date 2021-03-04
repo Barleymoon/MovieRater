@@ -33,5 +33,6 @@ namespace MovieRater.Data
         public virtual List<Review> Reviews { get; set; }
         
         public string Review { get; set; }
+        public string Rating { get; set; }
     }
 }
